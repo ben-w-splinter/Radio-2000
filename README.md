@@ -1,6 +1,20 @@
+# Radio 2000
+Welcome to this build of Radio 2000! There are many exciting features to enjoy
+- At the top shows the current station you are listening to
+- Below shows the album artwork for the song currently playing
+- Now playing shows the artist - title of the current song
+- Back pause/play and Forward allow you to navigate through stations
+
+## Screenshot
+![screenshot](https://github.com/ben-w-splinter/radio-2000/blob/main/image.jpg?raw=true)
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm i`
+
+Installs all needed packages for the app to run from source
 
 ### `npm start`
 
@@ -24,3 +38,4 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
