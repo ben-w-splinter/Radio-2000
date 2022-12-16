@@ -23,6 +23,6 @@ export const AudioPlayer = ({stationURL, playing} : props) => {
     
 
     return (
-        <audio controls src={stationURL} ref = {audio}/>
+        <audio src={stationURL} ref = {audio}/>
     )
 }

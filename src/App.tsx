@@ -66,6 +66,10 @@ function App() {
   return (
     <div className="App">
       <AudioPlayer stationURL={stationURL.current} playing = {playing}/>
+      <h4>Radio 2000</h4>
+      <h3>
+        {stations[currentTrackIndex].title}
+      </h3>
       <div className='audio-controls'>
             <FaStepBackward onClick={prevTrack} tabIndex={1}/>
             {playing ? <FaPauseCircle tabIndex={2} onClick={playPause}/> : <FaPlayCircle tabIndex={2} onClick= {playPause}/>}
