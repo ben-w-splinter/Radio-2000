@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 import { AudioControls } from './components/AudioControls';
-
+import { SongInfo } from './components/SongInfo';
 import {StyledApp} from './styles/StyledApp';
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
         <h3>
           {stations[currentTrackIndex].title}
         </h3>
+        <SongInfo stations={stations} currentTrackIndex={currentTrackIndex}/>
         <AudioControls stations={stations} currentTrackIndex={currentTrackIndex} setCurrentTrackIndex = {setCurrentTrackIndex}/>
       </StyledApp>
     </div>
