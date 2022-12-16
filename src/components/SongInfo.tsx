@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import {useState } from "react";
+import { StyledSongInfo } from "../styles/StyledSongInfo";
 import noalbum  from '../noalbum-black.png'
 
 interface props{
@@ -37,9 +38,9 @@ export const SongInfo = ({stations, currentTrackIndex} : props) => {
 
   fetchData();
   return (
-    <div>
+    <StyledSongInfo>
         <img alt='Album Cover' src={imageURL ? imageURL : noalbum}></img>
         <p>Now Playing : <br/>{song}</p>
-    </div>
+    </StyledSongInfo>
   )
 }
