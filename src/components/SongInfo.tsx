@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import noalbum  from '../noalbum-black.png'
 
 interface props{
@@ -11,23 +11,23 @@ interface props{
 
 export const SongInfo = ({stations, currentTrackIndex} : props) => {
   //Add a reference to the current song
-  const song = useRef("");
+  const [song, setSong] = useState("");
   //Add a reference to the album artwork image URL
-  const imageURL = useRef("");
+  const [imageURL, setImageURL] = useState("");
 
   function fetchData(){
     //Fetch the track info
     fetch("http://player.181fm.com/streamdata.php?h=listen.181fm.com&p=7080&i=181-" + stations[currentTrackIndex].id +"_128k.mp3")
     .then(response => response.json())
     .then(data => {
-          song.current = data.song;
+          setSong(data.song);
     })
     .then(() => {
           //Fetch the album info
-          fetch("http://player.181fm.com/album.php?key=" + song.current, {referrer: "",})
+          fetch("http://player.181fm.com/album.php?key=" + song, {referrer: "",})
           .then(response => response.json())
           .then(data => {
-              imageURL.current = data.Image;
+              setImageURL(data.Image);
           })
           .catch(error => console.error(error))
 
@@ -38,8 +38,8 @@ export const SongInfo = ({stations, currentTrackIndex} : props) => {
   fetchData();
   return (
     <div>
-        <img alt='Album Cover' src={imageURL.current ? imageURL.current : noalbum}></img>
-        <p>Now Playing : <br/>{song.current}</p>
+        <img alt='Album Cover' src={imageURL ? imageURL : noalbum}></img>
+        <p>Now Playing : <br/>{song}</p>
     </div>
   )
 }
