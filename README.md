@@ -6,7 +6,7 @@ Welcome to this build of Radio 2000! There are many exciting features to enjoy
 - Back pause/play and Forward allow you to navigate through stations
 
 ## Screenshot
-![screenshot](https://github.com/ben-w-splinter/radio-2000/blob/main/image.jpg?raw=true)
+![screenshot](https://github.com/ben-w-splinter/radio-2000/blob/main/screenshot.png?raw=true)
 
 ## Available Scripts
 
