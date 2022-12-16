@@ -13,17 +13,17 @@ function App() {
     {title : 'Smooth AC', id : 'smoothac'}
   ];
   //Keeps track of current track
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [currentStationIndex, setCurrentStationIndex] = useState(0);
 
   return (
     <div className="App">
       <StyledApp>
         <h4>Radio 2000</h4>
         <h3>
-          {stations[currentTrackIndex].title}
+          {stations[currentStationIndex].title}
         </h3>
-        <SongInfo stations={stations} currentTrackIndex={currentTrackIndex}/>
-        <AudioControls stations={stations} currentTrackIndex={currentTrackIndex} setCurrentTrackIndex = {setCurrentTrackIndex}/>
+        <SongInfo stations={stations} currentTrackIndex={currentStationIndex}/>
+        <AudioControls stations={stations} currentStationIndex={currentStationIndex} setCurrentStationIndex = {setCurrentStationIndex}/>
       </StyledApp>
     </div>
   );
